@@ -1,1 +1,191 @@
-<h1>Starlink Broadband</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Starlink Broadband</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: #020617;
+      padding: 15px;
+      font-size: 22px;
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .plan {
+      background: #1e293b;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 12px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .plan h2 {
+      color: #22c55e;
+    }
+
+    button {
+      background: #22c55e;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .form-box {
+      background: #1e293b;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    input, select {
+      width: 80%;
+      padding: 10px;
+      margin: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .upi {
+      margin-top: 20px;
+    }
+
+    .upi img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      padding: 12px 18px;
+      border-radius: 50px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 14px;
+      background: #020617;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>🚀 Starlink Broadband</header>
+
+<h3>Fast | Reliable | Affordable</h3>
+
+<div class="plans">
+
+  <div class="plan">
+    <h2>Basic</h2>
+    <p>₹499 / 30 Days</p>
+    <p>50 Mbps</p>
+    <button onclick="selectPlan('Basic - 499')">Select</button>
+  </div>
+
+  <div class="plan">
+    <h2>Standard</h2>
+    <p>₹699 / 30 Days</p>
+    <p>100 Mbps</p>
+    <button onclick="selectPlan('Standard - 699')">Select</button>
+  </div>
+
+  <div class="plan">
+    <h2>Premium</h2>
+    <p>₹999 / 30 Days</p>
+    <p>200 Mbps</p>
+    <button onclick="selectPlan('Premium - 999')">Select</button>
+  </div>
+
+</div>
+
+<div class="form-box">
+  <h2>Recharge / New Connection</h2>
+
+  <input type="text" id="name" placeholder="Your Name"><br>
+  <input type="text" id="mobile" placeholder="Mobile Number"><br>
+
+  <select id="plan">
+    <option>Select Plan</option>
+    <option>Basic - 499</option>
+    <option>Standard - 699</option>
+    <option>Premium - 999</option>
+  </select><br>
+
+  <button onclick="sendWhatsApp()">Submit Request</button>
+
+  <div class="upi">
+    <h3>Pay via UPI</h3>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=yourupi@upi&pn=Starlink" alt="QR">
+    <p>Scan & Pay</p>
+  </div>
+
+</div>
+
+<div class="whatsapp-float" onclick="contactWhatsApp()">
+  💬 Chat
+</div>
+
+<footer>
+  © 2026 Starlink Broadband | All Rights Reserved
+</footer>
+
+<script>
+function selectPlan(plan) {
+  document.getElementById("plan").value = plan;
+}
+
+function sendWhatsApp() {
+  var name = document.getElementById("name").value;
+  var mobile = document.getElementById("mobile").value;
+  var plan = document.getElementById("plan").value;
+
+  if(name=="" || mobile=="" || plan=="Select Plan"){
+    alert("Fill all details");
+    return;
+  }
+
+  var message = "New Customer Request:%0AName: " + name +
+                "%0AMobile: " + mobile +
+                "%0APlan: " + plan;
+
+  var phone = "918851040659"; // 🔴 apna number daal
+
+  window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+}
+
+function contactWhatsApp() {
+  var phone = "918851040659"; // 🔴 apna number daal
+  window.open("https://wa.me/" + phone, "_blank");
+}
+</script>
+
+</body>
+</html>
