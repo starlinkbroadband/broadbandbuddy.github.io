@@ -1,65 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Broadband Buddy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broadband Buddy</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #0f172a;
-            color: white;
-            text-align: center;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #020617;
-            padding: 20px;
-        }
+<style>
 
-        .logo {
-            width: 140px;
-            border-radius: 12px;
-        }
+body {
+    margin:0;
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+}
 
-        h1 {
-            margin: 10px 0 5px;
-            color: #4ade80;
-        }
+header {
+    background:#020617;
+    padding:20px;
+}
 
-        .subtitle {
-            color: #cbd5f5;
-            margin-bottom: 20px;
-        }
+.logo {
+    width:140px;
+}
 
-        .plan {
-            background: #1e293b;
-            margin: 10px 20px;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 18px;
-        }
+h1 {
+    color:#4ade80;
+}
 
-    </style>
+.plan-box {
+    background:#1e293b;
+    margin:15px;
+    padding:15px;
+    border-radius:12px;
+}
+
+.btn {
+    display:block;
+    margin:10px auto;
+    padding:12px;
+    width:80%;
+    max-width:300px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+}
+
+.whatsapp { background:#25D366; }
+.call { background:#2563eb; }
+.buy { background:#f59e0b; }
+
+.qr {
+    width:150px;
+    margin-top:10px;
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <!-- LOGO -->
-        <img src="logo.jpeg" class="logo">
+<header>
+<img src="logo.jpeg" class="logo">
+<h1>Broadband Buddy</h1>
+<p>Fast | Reliable | Affordable</p>
+</header>
 
-        <h1>Broadband Buddy</h1>
-        <div class="subtitle">Fast | Reliable | Affordable</div>
-    </header>
+<!-- 1 Month Plans -->
+<h2>1 Month Plans</h2>
 
-    <h2>1 Month Plans</h2>
+<div class="plan-box">100 Mbps - ₹499</div>
+<div class="plan-box">200 Mbps - ₹599</div>
+<div class="plan-box">300 Mbps - ₹699</div>
+<div class="plan-box">400 Mbps - ₹899</div>
 
-    <div class="plan">100 Mbps - ₹499</div>
-    <div class="plan">200 Mbps - ₹599</div>
-    <div class="plan">300 Mbps - ₹699</div>
-    <div class="plan">400 Mbps - ₹899</div>
+<!-- 4 Month Plans -->
+<h2>4 Months Plans</h2>
+
+<div class="plan-box">100 Mbps - ₹1799</div>
+<div class="plan-box">200 Mbps - ₹1999</div>
+<div class="plan-box">300 Mbps - ₹2499</div>
+<div class="plan-box">400 Mbps - ₹2999</div>
+
+<!-- CCTV Plan -->
+<h2>CCTV Plan</h2>
+
+<div class="plan-box">10 Mbps (Only CCTV Use) - ₹1000 (3 Months)</div>
+
+<!-- Buttons -->
+
+<a class="btn whatsapp" href="https://wa.me/917761998088">💬 WhatsApp Chat</a>
+
+<a class="btn call" href="tel:7761998088">📞 Call Now</a>
+
+<a class="btn buy" href="https://wa.me/917761998088?text=I want to buy internet plan">🛒 Buy Now</a>
+
+<!-- QR Code -->
+<h3>Scan & Chat</h3>
+
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/917761998088">
+
+<!-- UPI Payment -->
+<h2>Pay via UPI</h2>
+
+<a class="btn buy" href="upi://pay?pa=7761998088@okbizaxis&pn=BroadbandBuddy&cu=INR">
+💳 Pay Now
+</a>
+
+<!-- Location -->
+<h2>Our Location</h2>
+
+<iframe 
+width="90%" 
+height="200" 
+style="border-radius:10px"
+src="https://maps.google.com/maps?q=Lakhisarai&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+<br><br>
 
 </body>
 </html>
